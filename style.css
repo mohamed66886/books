@@ -11,7 +11,6 @@ body{
     direction: rtl;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 .active{
     background-color: var(--button-color);
@@ -58,6 +57,9 @@ position: fixed;
 z-index: 10000000;
 top: 0;
 
+}
+.container{
+    overflow: hidden;
 }
 /* header a{
     color: #fff;
