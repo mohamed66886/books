@@ -224,6 +224,12 @@ padding: 20px;
  margin: 20px auto;
     
 }
+.modal.show .modal-dialog{
+    background-color: var(--button-color) !important;
+}
+.btn-primary {
+    background-color: var(--button-color) !important;
+}
 .intro .row .col-4 i{
     font-size: 24px;
 }
@@ -234,6 +240,67 @@ padding: 20px;
     width: 500px;
     display: none;
 }
+.intro2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 50px;
+    
+}
+.imagenovel img{
+    width: 223px;
+    margin: 67px 40px;
+    box-shadow: 1px 1px 20px 8px grey;
+    border-radius: 18px;
+
+}
+#title{
+    text-align: center;
+    font-weight: bolder;
+    font-size: xxx-large;
+    color: var(--font-color);
+}
+.intro2 .info{
+    width: 415px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--font-color);
+}
+.novelinfo{
+    height: fit-content;
+    margin-top: auto;
+    color: var(--font-color);
+}
+.read{
+    height: fit-content;
+    background-color: var(--button-color);
+    font-size: 18px;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4px 3px 7px 2px grey;
+}
+.read a {
+    color: white;
+}
+
+
+#summerize{
+    width: 90%;
+    text-align: center;
+    margin: auto;
+
+    font-weight: 400;
+}
+.novelinfo p{
+    text-align: center;
+    font-weight: bolder;
+    font-size: large;
+    margin: 20px;
+ 
+}
 
 
 footer{
@@ -241,7 +308,7 @@ footer{
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
