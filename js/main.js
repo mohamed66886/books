@@ -42,3 +42,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     counters.forEach((counter) => observer.observe(counter));
 });
+
+document.getElementById("saveBtn").addEventListener("click", function() {
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let novelType = document.getElementById("novelType").value;
+
+    if (name && age && novelType) {
+        // تخزين الاسم في localStorage
+        localStorage.setItem("userName", name);
+
+        // تحديث نص الرابط بالاسم
+        document.getElementById("registerLink").innerHTML = name;
+
+        // إغلاق المودال
+        var modal = bootstrap.Modal.getInstance(document.getElementById('staticBackdrop'));
+        modal.hide();
+        alert("تم تسجيل  بنجاح!");
+    } else {
+        alert("يرجى ملء جميع الحقول قبل الحفظ.");
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let savedName = localStorage.getItem("userName");
+    if (savedName) {
+        document.getElementById("registerLink").innerHTML = savedName;
+    }
+});
+
+document.getElementById("logoutLink").addEventListener("click", function(event) {
+    event.preventDefault(); 
+
+    localStorage.removeItem("userName");
+
+  
+    document.getElementById("registerLink").innerHTML = 'تسجيل <i class="bi bi-box-arrow-in-right"></i>';
+   
+    alert("تم تسجيل الخروج بنجاح!");
+
+    location.reload();
+});

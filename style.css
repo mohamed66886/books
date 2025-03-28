@@ -9,7 +9,7 @@ body{
     background-color : var(--main-color);
     line-height: 1.6;
     direction: rtl;
-    overflow: hidden;
+
 }
 .active{
     background-color: var(--button-color);
@@ -179,7 +179,11 @@ padding: 20px;
 }
 
 
-
+.cardss{
+    margin: 20px auto;
+    width: 500px;
+    display: none;
+}
 
 footer{
     background-color: var(--nav-color);
@@ -198,7 +202,11 @@ footer{
     .main{
 
         margin: 60px auto 20px;
-{}
+}
+.cardss{
+display: block;
+    width: 100%;
+}
 
     .main .row .col .search input{
         width: 300px;
