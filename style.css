@@ -234,7 +234,12 @@ padding: 20px;
     font-size: 24px;
 }
 
-
+.imagenovel img {
+    width: 223px;
+    margin: 67px 40px;
+    box-shadow: 1px 1px 20px 8px grey;
+    border-radius: 18px;
+}
 .cardss{
     margin: 20px auto;
     width: 500px;
