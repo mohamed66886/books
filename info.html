@@ -3,51 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>من نحن</title>
+    <link rel="icon" type="image/png" href="images/روايتك.png">
+    <title>روايتك باختيارنا</title>
     <!-- css link -->
-     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+<meta name="description" content="اكتشف أفضل الروايات المختارة لك بناءً على اهتماماتك. ابحث عن روايتك المفضلة واستمتع بتجربة قراءة مميزة مع موقع روايتك باختيارنا.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="loading-screen" id="loading-screen" style="z-index: 10000000000;">
+        <svg viewBox="0 0 200 100">
+            <path d="M10,80 L10,20 L40,60 L70,20 L70,80" />
+            <path d="M90,80 L90,20 L130,20 L130,50 L90,50 L130,80" />
+        </svg>
+    </div>
+
 <header>
-    <div class="content">
-        <div class="logo"><img src="images/logo.png" alt=""></div>
-        <div class="links">
-                 <div class="icon2">
-                    <i class="fa-solid fa-circle-user"></i>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+            روايتك باختيارنا
+        </a>
+
+      </div>
+      <div class="login">
+        <a href="#" id="registerLink" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            تسجيل <i class="bi bi-box-arrow-in-right"></i>
+        </a>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="z-index: 10000000000000;">
+                <div class="modal-header" style="    gap: 68%;
+">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">تسجيل رغبة</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-            <div class="icon">
-                  <i class="fa-solid fa-bars""></i>
-                  
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label for="name" class="form-label">الاسم</label>
+                      <input type="text" class="form-control" id="name" placeholder="أدخل اسمك">
+                    </div>
+                    <div class="mb-3">
+                      <label for="age" class="form-label">السن</label>
+                      <input type="number" class="form-control" id="age" placeholder="أدخل سنك">
+                    </div>
+                    <div class="mb-3">
+                      <label for="novelType" class="form-label">نوع الرواية</label>
+                      <select class="form-select" id="novelType">
+                        <option selected disabled>اختر نوع الرواية</option>
+                        <option value="romantic">رومانسية</option>
+                        <option value="adventure">مغامرات</option>
+                        <option value="horror">رعب</option>
+                        <option value="science-fiction">خيال علمي</option>
+                        <option value="history">تاريخية</option>
+                      </select>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                  <button type="button" class="btn btn-primary" id="saveBtn">حفظ</button>
+                </div>
+              </div>
             </div>
-       
-     
+          </div>
           
-        <ul>
-            <a href="index.html"><li><i class="fa-solid fa-house-chimney"></i>الرئيسية</i></li></a> 
-           <a href="sin in.html"><li><i class="fa-solid fa-user-plus"></i>اشترك</i></li></a> 
-          <a href="login.html"><li><i class="fa-solid fa-right-to-bracket"></i>تسجيل الدخول</li></a>  
-          <a href="info.html"><li><i class="fa-solid fa-code"></i>من نحن</li></a>  
-          <a href="Show.html"><li><i class="fa-solid fa-book"></i>الروايات</li></a>  
-        </ul>
+        <a href=""><i class="bi bi-person-circle" style="font-size: 30px;"></i>        </a>
+      </div>
     </div>
-    </div>
-    
 </header>
+<nav>
+
+      
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel"  style="z-index: 1000000000;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500" >روايتك باختيارنا</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <ul class="links">
+            <a href="" ><li>الرئيسية</li> <i class="bi bi-house-door"></i>
+            </a>
+            <a href="Show.html"><li>الروايات</li> <i class="bi bi-book"></i>
+            </a>
+            <a href="info.html" class="active"><li>من نحن</li> <i class="bi bi-info-circle"></i>
+            </a>
+
+          
+
+        </ul>
+        <div class="loguot">
+            <a href="#" id="logoutLink">
+                <h4>تسجيل الخروج</h4> <i class="bi bi-box-arrow-right"></i>
+            </a>
+        </div>
+      </div>
+</nav>
 <div class="total-info">
     <div class="card-info">
     <img src="images/mohamerashad.jpg" alt="">
     <p>MOHAMED RASHAD</p>
     <br>
     <div class="icon-info">
-        <a href=""> <i class="fa-brands fa-instagram"></i></a> 
-        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-       <a href=""> <i class="fa-brands fa-linkedin"></i></a> 
-       <a href=""> <i class="fa-brands fa-github"></i></a> 
+        <a href=""> <i class="bi bi-instagram"></i></a> 
+        <a href=""> <i class="bi bi-facebook"></i></a>
+        <a href=""> <i class="bi bi-linkedin"></i></a> 
+        <a href=""> <i class="bi bi-github"></i></a>
+        
     </div>
    
 </div>
@@ -56,10 +124,11 @@
     <p>HADI OMER</p>
     <br>
     <div class="icon-info">
-        <a href=""> <i class="fa-brands fa-instagram"></i></a> 
-        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-       <a href=""> <i class="fa-brands fa-linkedin"></i></a> 
-       <a href=""> <i class="fa-brands fa-github"></i></a> 
+        <a href=""> <i class="bi bi-instagram"></i></a> 
+        <a href=""> <i class="bi bi-facebook"></i></a>
+        <a href=""> <i class="bi bi-linkedin"></i></a> 
+        <a href=""> <i class="bi bi-github"></i></a>
+        
    </div>
 </div>
 <div class="card-info">
@@ -67,10 +136,11 @@
     <p>AHMED RAMADAN</p>
     <br>
     <div class="icon-info">
-        <a href=""> <i class="fa-brands fa-instagram"></i></a> 
-        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-       <a href=""> <i class="fa-brands fa-linkedin"></i></a> 
-       <a href=""> <i class="fa-brands fa-github"></i></a> 
+        <a href=""> <i class="bi bi-instagram"></i></a> 
+        <a href=""> <i class="bi bi-facebook"></i></a>
+        <a href=""> <i class="bi bi-linkedin"></i></a> 
+        <a href=""> <i class="bi bi-github"></i></a>
+        
    </div>
 </div>
 <div class="card-info">
@@ -78,19 +148,40 @@
     <p>ALIAA ASHRAH</p>
     <br>
     <div class="icon-info">
-        <a href=""> <i class="fa-brands fa-instagram"></i></a> 
-        <a href=""> <i class="fa-brands fa-square-facebook"></i></a>
-       <a href=""> <i class="fa-brands fa-linkedin"></i></a> 
-       <a href=""> <i class="fa-brands fa-github"></i></a> 
+        <a href=""> <i class="bi bi-instagram"></i></a> 
+        <a href=""> <i class="bi bi-facebook"></i></a>
+        <a href=""> <i class="bi bi-linkedin"></i></a> 
+        <a href=""> <i class="bi bi-github"></i></a>
+        
    </div>
 </div>
 </div>
-<br>
-<br>
-<br>
-<br>
 
+
+<button class="btn " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="
+background-color: var(--button-color);
+position: fixed;
+bottom: 70px;
+right: 15px;
+border: none;
+border-radius: 50%;
+font-size: 26px;
+box-shadow: 4px 3px 7px 2px grey;
+color: #fff;
+animation: bounce 1s infinite;
+z-index: 1000;
+">
+  <i class="bi bi-list"></i>
+</button>
 <footer>
-    <div class="fot">CopyRight &copy; All Rights Reserved Created By IEEE TEAM</div></footer>
+CopyRight &copy; All Rights Reserved Created By <a href="">IEEE TEAM</a>
+</footer> 
+
+<script>
+  AOS.init();
+</script>
+
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -51,7 +51,7 @@ header{
 background-color: var(--nav-color);
 color: var(--font-color);
 padding: 3px;
-box-shadow: 4px 3px 7px 2px grey;
+box-shadow: -4px -2px 20px 0px grey;
 width: 100%;
 position: fixed;
 z-index: 10000000;
@@ -307,7 +307,42 @@ padding: 20px;
  
 }
 
+.total-info{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ margin-top: 50px;
+}
+.total-info .card-info{
+    width: 282px;
+   background-color: var(--nav-color);
+   margin: 30px auto;
+   padding: 10px;
+   box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.5);
+   text-align: center;
+   transition: all 1s;
+}
+.icon-info{
+    width: 100%;
+    display: flex;
+    margin: auto;
+}
+.card-info p{
+    font-size: 24px;
+    margin: 10px 20px 0;
+}
+.card-info img {
+        width: 264px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);}
 
+.icon-info a {
+    width: calc(100% /4);
+    margin: 10px;
+    font-size: x-large;
+    text-align: center;
+}
 footer{
     background-color: var(--nav-color);
     color: rgb(0, 0, 0);
@@ -330,6 +365,7 @@ footer{
 display: block;
     width: 100%;
 }
+
 
     .main .row .col .search input{
         width: 300px;

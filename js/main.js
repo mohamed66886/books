@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
 
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
-    const speed = 100; 
+    const speed = 500; 
 
     const startCounting = (counter) => {
         const target = +counter.getAttribute("data-target");
