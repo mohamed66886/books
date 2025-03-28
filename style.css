@@ -9,6 +9,8 @@ body{
     background-color : var(--main-color);
     line-height: 1.6;
     direction: rtl;
+    margin: 0;
+    padding: 0;
 
 }
 .active{
@@ -52,6 +54,9 @@ color: var(--font-color);
 padding: 3px;
 box-shadow: 4px 3px 7px 2px grey;
 width: 100%;
+position: fixed;
+z-index: 10000000;
+top: 0;
 
 }
 /* header a{
@@ -107,7 +112,7 @@ align-items: center;
     max-height: 200px;
     overflow-y: auto;
     display: none; 
-    z-index: 1000;
+    z-index: 100000000;
 
 }
 
@@ -265,6 +270,15 @@ display: block;
     }
     .links a{
         font-size: 18px;
+    }
+    footer{
+        position: relative;
+    }
+    input{
+        height: 40px;
+    }
+    .search button{
+        height: 40px;
     }
 
 }
