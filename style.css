@@ -11,7 +11,7 @@ body{
     direction: rtl;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
 }
 .active{
     background-color: var(--button-color);
@@ -232,6 +232,7 @@ padding: 20px;
     width: 500px;
     display: none;
 }
+
 
 footer{
     background-color: var(--nav-color);
