@@ -84,3 +84,52 @@ document.getElementById("logoutLink").addEventListener("click", function(event) 
 
     location.reload();
 });
+const novels = [
+    "روميو وجولييت",
+    "البؤساء",
+    "الخيميائي",
+    "العمى",
+    "مئة عام من العزلة",
+    "أوليفر تويست",
+    "الجريمة والعقاب",
+    "العراب",
+    "عزازيل",
+    "في قلبي أنثى عبرية"
+];
+
+const searchInput = document.getElementById("searchInput");
+const resultsList = document.getElementById("resultsList");
+
+searchInput.addEventListener("input", function() {
+    let query = this.value.trim();
+    resultsList.innerHTML = "";
+
+    if (query !== "") {
+        let results = novels.filter(novel => novel.includes(query));
+
+        if (results.length > 0) {
+            results.forEach(novel => {
+                let li = document.createElement("li");
+                li.textContent = novel;
+                
+                li.addEventListener("click", function() {
+                    searchInput.value = novel;
+                    resultsList.style.display = "none";
+                });
+
+                resultsList.appendChild(li);
+            });
+            resultsList.style.display = "block";
+        } else {
+            resultsList.style.display = "none";
+        }
+    } else {
+        resultsList.style.display = "none"; 
+    }
+});
+
+document.addEventListener("click", function(e) {
+    if (!searchInput.contains(e.target) && !resultsList.contains(e.target)) {
+        resultsList.style.display = "none";
+    }
+});

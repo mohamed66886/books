@@ -82,13 +82,51 @@ align-items: center;
     align-items: center;
     color: var(--font-color)
 }
+.search {
+    position: relative;
+    max-width: 500px;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#resultsList {
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    bottom: -200px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none; 
+    z-index: 1000;
+
+}
+
+#resultsList li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#resultsList li:hover {
+    background: #f0f0f0;
+}
 .container .login a .bi-box-arrow-in-right{
     margin-right: 11px;
    font-size: 28px;
 }
 .loguot{
     position: absolute;
-    bottom: 0;
+    bottom: 52px;
     width: 100%;
     padding: 10px;
     color: #fff;
@@ -96,11 +134,16 @@ align-items: center;
     cursor: pointer;
 
 }
+.loguot h4{
+    font-size: 20px;
+}
 .loguot a{
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: var(--font-color);
+    font-size: 25px;
+ padding: 10px 30px;
 }
 .links{
     list-style: none;
@@ -145,7 +188,7 @@ padding: 20px;
     color: var(--font-color);
 }
 .main .row .col .search{
-    margin: 10px auto;
+    margin: 30px auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,6 +254,19 @@ display: block;
     .main .row .col .search input{
         width: 300px;
     }
+    .offcanvas{
+        width: 300px !important;
+    }
+    .loguot a{
+        font-size: 18px;
+    }
+    .loguot h4{
+        font-size: 18px;
+    }
+    .links a{
+        font-size: 18px;
+    }
+
 }
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }

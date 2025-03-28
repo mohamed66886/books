@@ -86,6 +86,7 @@
      box-shadow: 4px 3px 7px 2px grey;
      color: #fff;
      animation: bounce 1s infinite;
+     z-index: 1000;
     ">
         <i class="bi bi-list"></i>
       </button>
@@ -120,9 +121,11 @@
             <h1>روايتك باختيارنا</h1>
             <p>هنا يمكنك الحصول على الروايات المفضلة لك من خلال البحث عنها</p>
             <div class="search">
-                <input type="text" placeholder="ابحث عن رواية">
-                <button>ابحث</button>
+                <input type="text" id="searchInput" placeholder="ابحث عن رواية">
+                <ul id="resultsList"></ul>
+                <button id="searchBtn">ابحث</button>
             </div>
+        
         </div>
     </div>
 
