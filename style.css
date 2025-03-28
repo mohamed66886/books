@@ -195,7 +195,10 @@ footer{
     header .container a{
         font-size: 20px;
     }
+    .main{
 
+        margin: 60px auto 20px;
+{}
 
     .main .row .col .search input{
         width: 300px;
